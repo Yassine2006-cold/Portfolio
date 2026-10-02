@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yassine Lamnini — Portfolio</title>
+  <meta name="description" content="Portfolio de Yassine Lamnini, étudiant ingénieur à Centrale Lyon. Projets en robotique, optimisation, programmation et ingénierie.">
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --card: #ffffff;
+      --text: #17202a;
+      --muted: #5f6b76;
+      --line: #e4e8ec;
+      --accent: #1f5eff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    .container { width: min(1050px, 92%); margin: auto; }
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(247,248,250,.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(10px);
+    }
+    nav .container {
+      display: flex; justify-content: space-between; align-items: center;
+      min-height: 62px;
+    }
+    .brand { font-weight: 800; }
+    nav a { color: var(--text); margin-left: 22px; font-size: .95rem; }
+    header { padding: 95px 0 70px; }
+    .tag {
+      display: inline-block; padding: 7px 12px; border-radius: 999px;
+      background: #eaf0ff; color: #1749c8; font-weight: 700; font-size: .9rem;
+    }
+    h1 { font-size: clamp(2.5rem, 7vw, 5rem); line-height: 1.02; margin: 18px 0; letter-spacing: -0.04em; }
+    .lead { font-size: 1.2rem; color: var(--muted); max-width: 760px; }
+    .buttons { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      display: inline-block; padding: 12px 18px; border-radius: 10px;
+      border: 1px solid var(--line); background: var(--card); color: var(--text);
+      font-weight: 700;
+    }
+    .btn.primary { background: var(--accent); color: white; border-color: var(--accent); }
+    section { padding: 55px 0; }
+    h2 { font-size: 2rem; margin: 0 0 25px; }
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .card {
+      background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+      padding: 24px; box-shadow: 0 4px 18px rgba(20,30,40,.04);
+    }
+    .card h3 { margin-top: 0; }
+    .meta { color: var(--muted); font-size: .92rem; }
+    .skills { display: flex; flex-wrap: wrap; gap: 9px; }
+    .skill {
+      border: 1px solid var(--line); background: var(--card);
+      padding: 8px 12px; border-radius: 999px; font-size: .92rem;
+    }
+    .timeline { border-left: 2px solid var(--line); padding-left: 22px; }
+    .timeline-item { margin-bottom: 28px; }
+    footer { border-top: 1px solid var(--line); padding: 35px 0 55px; color: var(--muted); }
+    @media (max-width: 700px) {
+      nav .container { flex-direction: column; padding: 12px 0; gap: 8px; }
+      nav a { margin: 0 8px; font-size: .85rem; }
+      header { padding-top: 60px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <div class="brand">Yassine Lamnini</div>
+    <div>
+      <a href="#about">À propos</a>
+      <a href="#projects">Projets</a>
+      <a href="#skills">Compétences</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="container">
+  <span class="tag">Étudiant ingénieur · Centrale Lyon · 1A</span>
+  <h1>Yassine<br>Lamnini</h1>
+  <p class="lead">
+    Étudiant ingénieur à l'École Centrale de Lyon, avec un intérêt pour la
+    robotique, l'intelligence artificielle, l'optimisation et les systèmes
+    technologiques. Je cherche à développer des projets concrets et à participer
+    à des hackathons pour transformer des idées en prototypes.
+  </p>
+  <div class="buttons">
+    <a class="btn primary" href="#projects">Voir mes projets</a>
+    <a class="btn" href="mailto:lamyassine2000@gmail.com">Me contacter</a>
+    <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</header>
+
+<main>
+<section id="about">
+  <div class="container">
+    <h2>À propos</h2>
+    <div class="card">
+      <p>
+        Je suis actuellement en première année à l'École Centrale de Lyon après
+        une formation en CPGE MP-SI au Lycée Méditerranéen (LIMED).
+        Mon parcours m'a donné une base solide en mathématiques, physique et
+        sciences de l'ingénieur.
+      </p>
+      <p>
+        Je m'intéresse particulièrement aux problèmes où théorie, programmation
+        et expérimentation se rencontrent. Je souhaite continuer à construire
+        mon expérience à travers des projets, des hackathons et des expériences
+        internationales.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <h2>Projets</h2>
+    <div class="grid">
+
+      <article class="card">
+        <h3>Robot bipède</h3>
+        <p class="meta">Robotique · Arduino · Systèmes embarqués</p>
+        <p>
+          Projet de conception et de commande d'un robot bipède utilisant une
+          Arduino Mega et des servomoteurs. Travail sur la commande des
+          actionneurs, la programmation des mouvements et l'intégration du système.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Optimisation de routes inspirée des abeilles</h3>
+        <p class="meta">TIPE · Optimisation · Python</p>
+        <p>
+          Étude d'un problème d'optimisation de tournées inspiré du comportement
+          des abeilles, avec modélisation de réseaux routiers et comparaison
+          d'approches algorithmiques telles que les méthodes gloutonnes,
+          2-opt et les algorithmes évolutionnaires.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>MATLAB & Simulink</h3>
+        <p class="meta">Automatique · Énergie · Modélisation</p>
+        <p>
+          Utilisation de MATLAB/Simulink dans le cadre de la formation d'ingénieur,
+          notamment pour l'automatique linéaire, la modélisation et l'étude de
+          systèmes électriques.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Hackathons & défis techniques</h3>
+        <p class="meta">Innovation · Prototypage · Travail en équipe</p>
+        <p>
+          Participation et recherche active de hackathons scientifiques et
+          technologiques afin de développer des prototypes, travailler en équipe
+          et acquérir une expérience pratique en dehors des enseignements.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <h2>Compétences</h2>
+    <div class="card">
+      <div class="skills">
+        <span class="skill">Python</span>
+        <span class="skill">MATLAB</span>
+        <span class="skill">Simulink</span>
+        <span class="skill">Arduino / C++</span>
+        <span class="skill">Algorithmique</span>
+        <span class="skill">Optimisation</span>
+        <span class="skill">Robotique</span>
+        <span class="skill">Modélisation</span>
+        <span class="skill">Mathématiques</span>
+        <span class="skill">Physique</span>
+        <span class="skill">Sciences de l'ingénieur</span>
+        <span class="skill">Travail en équipe</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="container">
+    <h2>Formation & parcours</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>École Centrale de Lyon</h3>
+        <p class="meta">2026 – aujourd'hui · Cycle ingénieur · 1A</p>
+        <p>Formation généraliste d'ingénieur : mathématiques, physique, mécanique, automatique, énergie et informatique.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>CPGE — Lycée Méditerranéen (LIMED)</h3>
+        <p class="meta">2023 – 2026 · Filière MP-SI</p>
+        <p>Formation intensive en mathématiques, physique et sciences de l'ingénieur, avec préparation aux concours des grandes écoles.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>Concours scientifiques</h3>
+        <p>
+          Passage des concours aux grandes écoles. Participation à
+          <strong>Maths et Maroc 2025</strong> (rang 64) et aux Olympiades de
+          mathématiques au niveau municipal.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2>Contact</h2>
+    <div class="card">
+      <p><strong>Yassine Lamnini</strong></p>
+      <p>Email : <a href="mailto:lamyassine2000@gmail.com">lamyassine2000@gmail.com</a></p>
+      <p>LinkedIn : <a href="https://www.linkedin.com/" target="_blank" rel="noopener">Yassine Lamnini</a></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 Yassine Lamnini · Portfolio étudiant ingénieur
+  </div>
+</footer>
+
+</body>
+</html>
